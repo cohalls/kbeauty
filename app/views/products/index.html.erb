@@ -1,0 +1,19 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1>Korean Beauty </h1>
+      <h2>Discover new products to make your skin glow</h2>
+    </div>
+</div>
+    <div class="row">
+      <% @products.each do |product| %>
+        <div class="col-4 offset-4 text-center item">
+          <h3><%= product.name %></h3>
+          <p><%= product.brand %></p>
+          <p>$<%= product.price %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
