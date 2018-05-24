@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
     @product = Product.new
   end
   def create
-    @product = Product.new(productParams)
+    Product.create(product_params)
     redirect_to root_path
   end
   def update
@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
   def about
   end
   private
-  def productParams
+  def product_params
+    params.require(:product).permit(:name, :brand, :price)
   end
 end
