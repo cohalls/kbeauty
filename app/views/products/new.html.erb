@@ -1,0 +1,9 @@
+<div class="booyah-box">
+  <h1>Enter Your Product Details</h1>
+  <%= simple_form_for @product do |f| %>
+    <%= f.input :name %>
+    <%= f.input :price %>
+    <%= f.input :brand %>
+    <%= f.submit 'Create', class: 'btn-btn-primary' %>
+  <% end %>
+</div>

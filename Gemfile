@@ -59,6 +59,4 @@ source 'http://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 
-group :production do
-  gem 'rails_12factor'
-end
+gem 'simple_form'
