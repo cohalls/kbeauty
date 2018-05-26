@@ -2,12 +2,15 @@ class ProductsController < ApplicationController
   def index
    @products = Product.all
   end
+  def show
+    @product = Product.find(params[:id])
+  end
   def new
     @product = Product.new
   end
   def create
-    Product.create(product_params)
-    redirect_to root_path
+    @product = Product.create(product_params)
+    redirect_to product_path(@product)
   end
   def update
     @product = Product.find(params[:id])
